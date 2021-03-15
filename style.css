@@ -56,3 +56,65 @@ body {
 input[type="file"]{
     display: none;
 }
+
+.preview{
+    display: flex;
+    flex-wrap: wrap;
+    padding: .5rem;
+
+}
+
+.preview-image{
+    position: relative;
+    margin-bottom: .5rem;
+    margin-right: .5rem;
+    overflow: hidden;
+}
+
+
+.preview-image img {
+    width: 180px;
+    height: 130px;
+    object-fit: cover;
+}
+
+.preview-remove{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+    background: rgba(255,255,255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: .3s;
+}
+
+.preview-image:hover .preview-remove{
+    opacity: 1;
+}
+
+.preview-info{
+    position: absolute;
+    right: 0;
+    bottom: -25px;
+    left: 0;
+    height: 25px;
+    font-size: .8rem;
+    font-weight: bold;
+    background: rgba(255,255,255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: .3s;
+    padding: 0 5px;
+}
+
+.preview-image:hover .preview-info{
+    bottom: 4px;
+}
