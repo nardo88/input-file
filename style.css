@@ -69,6 +69,7 @@ input[type="file"]{
     margin-bottom: .5rem;
     margin-right: .5rem;
     overflow: hidden;
+    transition: transform 0.3s;
 }
 
 
@@ -117,4 +118,8 @@ input[type="file"]{
 
 .preview-image:hover .preview-info{
     bottom: 4px;
+}
+
+.removing{
+    transform: scale(0);
 }
